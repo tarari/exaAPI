@@ -19,5 +19,7 @@ Route::get('/', function () {
     return view('home');
 });
 Route::get('/products', [DashboardController::class, 'products'])->name('products');
+Route::get('/vendors', [DashboardController::class, 'vendors'])->name('vendors');
+Route::get('/categories', [DashboardController::class, 'categories'])->name('categories');
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 Route::get('/search', [DashboardController::class, 'search']);

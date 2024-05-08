@@ -4,8 +4,12 @@
             <a href="{{route('products')}}">
                 <button  class="m-2 bg-teal-500 text-white px-4 py-2 rounded-md">Products</button></a>
             </a>
-            <button class="m-2 bg-teal-500 text-white px-4 py-2 rounded-md">Categories</button>
-            <button class="m-2 bg-teal-500 text-white px-4 py-2 rounded-md">Vendors</button>
+            <a href="{{route('categories')}}">
+                <button class="m-2 bg-teal-500 text-white px-4 py-2 rounded-md">Categories</button>
+            </a>
+            <a href="{{route('vendors')}}">
+                <button class="m-2 bg-teal-500 text-white px-4 py-2 rounded-md">Vendors</button>
+            </a>
         </div>
     </div>
     <div>

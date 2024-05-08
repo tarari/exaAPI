@@ -10,7 +10,7 @@
 <body class="flex flex-col h-screen justify-between">
     <header class="h-10 bg-gray-500 text-center">ApiProof v.1.0</header>
     <div class="h-10 bg-gray-200"> <a  class="mx-4" href="{{route('dashboard')}}">More API options</a> </div>
-    <main class="mb-auto h-10 ">
+    <main class="mb-auto h-10">
         {{ $slot }}
     </main>
 
