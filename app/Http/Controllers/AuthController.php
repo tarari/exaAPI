@@ -27,7 +27,7 @@ class AuthController extends Controller
                 'email' => $validated['email'],
                 'password' => $validated['password'],
             ]);
-            dd($response);
+
             $user = json_decode($response)->content->name;
 
             $token = $response->json('token');
