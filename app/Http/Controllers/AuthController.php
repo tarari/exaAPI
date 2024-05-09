@@ -21,13 +21,13 @@ class AuthController extends Controller
             ]);
 
             $validated = $validator->validated();
-            dd($validated);
+
 
             $response = Http::post(env('API_URL').'/api/login', [
                 'email' => $validated['email'],
                 'password' => $validated['password'],
             ]);
-
+            dd($response);
             $user = json_decode($response)->content->name;
 
             $token = $response->json('token');
