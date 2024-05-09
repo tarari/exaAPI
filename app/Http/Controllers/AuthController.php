@@ -29,7 +29,7 @@ class AuthController extends Controller
             $user = json_decode($response)->content->name;
 
             $token = $response->json('token');
-
+            dd($response);
             session(['name' => $user]);
             session(['token' => $token]);
             session()->save();
