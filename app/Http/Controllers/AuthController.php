@@ -13,7 +13,7 @@ class AuthController extends Controller
     }
     public function auth(Request $request)
     {
-        dd($request->all());
+
         try {
             $validator = Validator::make($request->all(), [
                 'email' => 'required',
@@ -21,6 +21,7 @@ class AuthController extends Controller
             ]);
 
             $validated = $validator->validated();
+            dd($validated);
 
             $response = Http::post(env('API_URL').'/api/login', [
                 'email' => $validated['email'],
