@@ -24,7 +24,7 @@ class DashboardController extends Controller
         return $response;
     }
     function search(){
-        $response=Http::get(env('API_URL').'/api/products');
+        $response=Http::get(env('API_URL').'/api/search');
         return $response->json();
     }
 }

@@ -8,8 +8,8 @@
     <title>API.proof</title>
 </head>
 <body class="flex flex-col h-screen justify-between">
-    <header class="h-10 bg-gray-500 text-center">ApiProof v.1.0</header>
-    <div class="h-10 bg-gray-200"> <a  class="mx-4" href="{{route('dashboard')}}">More API options</a> </div>
+    <header class="h-10 bg-gray-500 text-center  text-white text-3xl">ApiProof v.1.0</header>
+    <x-nav>{{ $slot }}</x-nav>
     <main class="mb-auto h-10">
         {{ $slot }}
     </main>
