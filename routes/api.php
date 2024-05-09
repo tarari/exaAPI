@@ -22,7 +22,7 @@ use App\Http\Controllers\Api\CategoryController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::post('login',[AuthController::class,'login']);
+Route::post('login',[AuthController::class,'log']);
 Route::resource('categories', CategoryController::class);
 Route::resource('products',ProductController::class);
 Route::resource('vendors', VendorController::class);
