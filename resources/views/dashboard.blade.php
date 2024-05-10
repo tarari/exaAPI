@@ -20,8 +20,7 @@
             <h1 class="text-3xl font-bold">Results</h1>
             <div id="results" class="flex flex-wrap justify-center">
 
-            @component('results', ['datos' => $data])
-            @endcomponent
+            <x-results :data="$data"/>
 
             </div>
         </div>
