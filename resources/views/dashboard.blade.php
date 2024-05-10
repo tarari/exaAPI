@@ -20,7 +20,7 @@
             <h1 class="text-3xl font-bold">Results</h1>
             <div id="results" class="flex flex-wrap justify-center">
                 <x-results>
-                    {{$data}}
+                    {{$slot}}
                 </x-results>
             </div>
         </div>
