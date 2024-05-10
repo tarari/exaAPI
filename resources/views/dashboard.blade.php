@@ -20,7 +20,9 @@
             <h1 class="text-3xl font-bold">Results</h1>
             <div id="results" class="flex flex-wrap justify-center">
                 <x-results>
-                    {{$slot}}
+                    @foreach ($data as $item)
+                    <code> {{ print_r($item) }} </code>
+                    @endforeach
                 </x-results>
             </div>
         </div>
