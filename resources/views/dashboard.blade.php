@@ -19,11 +19,10 @@
         <div class="flex flex-col items-center justify-center">
             <h1 class="text-3xl font-bold">Results</h1>
             <div id="results" class="flex flex-wrap justify-center">
-                <x-results>
-                    @foreach ($data as $item)
-                    <code> {{ print_r($item) }} </code>
-                    @endforeach
-                </x-results>
+
+            @component('results', ['datos' => $data])
+            @endcomponent
+
             </div>
         </div>
     </div>

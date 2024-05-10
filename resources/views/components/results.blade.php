@@ -1,10 +1,22 @@
-<div class="flex flex-col items-center justify-center bg-blue-100">
+<script setup>
+    const datos = defineProps(['data']);
+</script>
 
-</div>
-
-@push('scripts')
-        <script>
-            const results = document.getElementById('results');
-            results.innerHTML = '{{$slot}}';
-        </script>
-    @endpush
+    <template>
+        <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Stock</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="item in data" :key="item.id">
+            <td>{{ item.name }}</td>
+            <td>{{ item.price }}</td>
+            <td>{{ item.stock }}</td>
+            </tr>
+        </tbody>
+        </table>
+    </template>
