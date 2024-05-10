@@ -13,7 +13,7 @@ class DashboardController extends Controller
     }
     function products(){
         $response=Http::timeout(10)->get(env('API_URL').'/api/products');
-        return $response;
+        dd($response);
     }
     function vendors(){
         $response=Http::timeout(10)->get(env('API_URL').'/api/vendors');
