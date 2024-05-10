@@ -5,11 +5,12 @@ namespace App\Http\Controllers\Api;
 use App\Models\Vendor;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\VendorCollection;
 
 class VendorController extends Controller
 {
     function index(){
-        return Vendor::all();
+        return new VendorCollection(Vendor::all());
     }
     function show(Vendor $vendor){
         return $vendor;
