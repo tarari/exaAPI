@@ -14,6 +14,6 @@
         {{ $slot }}
     </main>
 
-    <footer class="bg-black text-white px-auto py-4 text-center">API.Proof - by Toni Jimenez, 2024</footer>
+    <footer class="sticky top-[100vh] bg-black text-white px-auto py-4 text-center">API.Proof - by Toni Jimenez, 2024</footer>
 </body>
 </html>
