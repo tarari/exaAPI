@@ -73,7 +73,7 @@ class AuthController extends Controller
             ]);
 
             $user = json_decode($response)->data->name;
-            dd($user);
+
             $token = $response->json('token');
 
             session(['name' => $user]);
