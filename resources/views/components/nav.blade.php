@@ -1,5 +1,5 @@
 <div class="flex flex-inline items-center bg-gray-200 p-2">
-@if (auth()->check())
+@if (session()->has('name'))
 <x-nav-link href="{{ route('logout') }}" :active="request()->routeIs('logout')">Logout</x-nav-link>
 @else
 <x-nav-link href="{{ route('login') }}" :active="request()->routeIs('login')">Login</x-nav-link>
