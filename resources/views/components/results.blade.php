@@ -3,3 +3,10 @@
     <code> {{ print_r($item) }} </code>
     @endforeach
 </div>
+
+@push('scripts')
+        <script>
+            const results = document.getElementById('results');
+            results.innerHTML = '{{$slot}}';
+        </script>
+    @endpush
