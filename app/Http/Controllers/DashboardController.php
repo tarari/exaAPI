@@ -31,6 +31,8 @@ class DashboardController extends Controller
     }
     function search(){
         $response=Http::get(env('API_URL').'/api/search');
-        return $response->json();
+        $data=json_decode($response->body(),true);
+        $data=$data['data'];
+        return view('dashboard',['data'=>$data]);
     }
 }
