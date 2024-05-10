@@ -71,9 +71,9 @@ class AuthController extends Controller
                 'email' => $validated['email'],
                 'password' => $validated['password'],
             ]);
-            dd(json_decode($response));
-            $user = json_decode($response)->content->name;
 
+            $user = json_decode($response)->data->name;
+            dd($user);
             $token = $response->json('token');
 
             session(['name' => $user]);
