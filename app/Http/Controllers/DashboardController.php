@@ -19,11 +19,15 @@ class DashboardController extends Controller
     }
     function vendors(){
         $response=Http::timeout(10)->get(env('API_URL').'/api/vendors');
-        return $response;
+        $data=json_decode($response->body(),true);
+        $data=$data['data'];
+        return view('dashboard',['data'=>$data]);
     }
     function categories(){
         $response=Http::timeout(10)->get(env('API_URL').'/api/categories');
-        return $response;
+        $data=json_decode($response->body(),true);
+        $data=$data['data'];
+        return view('dashboard',['data'=>$data]);
     }
     function search(){
         $response=Http::get(env('API_URL').'/api/search');

@@ -1,7 +1,10 @@
 
 @foreach ($data as $item)
-@php
+<pre>
+    @php
     print_r($item);
 @endphp
+</pre>
+
 
 @endforeach
