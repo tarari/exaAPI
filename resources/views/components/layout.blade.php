@@ -8,7 +8,9 @@
     <title>API.proof</title>
 </head>
 <body class="flex flex-col h-screen justify-between h-screen overflow-hidden">
-    <header class="h-10 bg-gray-500 text-center  text-white text-3xl">ApiProof v.1.0</header>
+    <header class="h-10 bg-gray-500 text-center  text-white text-3xl">
+        <img class="w-2 h-2" src="{{asset('storage/toni-boda.png')}}" alt="API.proof">
+        ApiProof v.1.0</header>
     <x-nav>{{ $slot }}</x-nav>
     <main class="mb-auto overflow-y-scroll">
         {{ $slot }}
