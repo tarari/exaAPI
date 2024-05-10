@@ -18,7 +18,11 @@
     <div>
         <div class="flex flex-col items-center justify-center">
             <h1 class="text-3xl font-bold">Results</h1>
-            <div id="results" class="flex flex-wrap justify-center"></div>
+            <div id="results" class="flex flex-wrap justify-center">
+                <x-results>
+                    {{$data}}
+                </x-results>
+            </div>
         </div>
     </div>
 </x-layout>

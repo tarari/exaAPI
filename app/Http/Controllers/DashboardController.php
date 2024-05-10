@@ -15,8 +15,7 @@ class DashboardController extends Controller
         $response=Http::timeout(10)->get(env('API_URL').'/api/products');
         $data=json_decode($response->body(),true);
         $data=$data['data'];
-
-        dd($data);
+        return $data;
     }
     function vendors(){
         $response=Http::timeout(10)->get(env('API_URL').'/api/vendors');
