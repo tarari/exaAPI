@@ -9,7 +9,7 @@
 </head>
 <body class="flex flex-col h-screen justify-between h-screen overflow-hidden">
     <header class="h-10 bg-gray-500 text-center  text-white text-3xl m-2">
-        <img class="w-2 h-2 rounded-full" src="{{asset('img/toni-boda.png')}}" alt="API.proof">
+        <a href="https://toniprojects.eu"><img class="w-2 h-2 rounded-full" src="{{asset('img/toni-boda.png')}}" alt="API.proof"></a>
         ApiProof v.1.0</header>
     <x-nav>{{ $slot }}</x-nav>
     <main class="mb-auto overflow-y-scroll">
