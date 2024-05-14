@@ -12,7 +12,7 @@ class DashboardController extends Controller
 
     }
     function products(){
-        $response=Http::timeout(10)->get(env('API_URL').'/api/products');
+        $response=Http::withToken(session('token'))->timeout(10)->get(env('API_URL').'/api/products');
         $data=json_decode($response->body(),true);
         $data=$data['data'];
         return view('dashboard',['data'=>$data]);
