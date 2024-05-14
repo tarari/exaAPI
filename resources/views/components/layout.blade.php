@@ -9,9 +9,9 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="flex flex-col h-screen justify-between h-screen overflow-hidden">
-    <header class="h-10 bg-gray-500 text-center  text-white text-3xl p-2 rounded-sm">
-        <img class="w-8 h-8 flex-inline" alt="logo" src="{{ Vite::asset('resources/img/logoface.png') }}">
-        ApiProof v.1.0</header>
+    <header class="h-10 bg-gray-500 text-center  text-white  p-2 rounded-sm">
+        <img class="w-8 h-8 flex-inline rounded-full" alt="logo" src="{{ Vite::asset('resources/img/logoface.png') }}">
+        <h1 class="flex-inline text-2xl">ApiProof v.1.0</h1></header>
     <x-nav>{{ $slot }}</x-nav>
     <main class="mb-auto overflow-y-scroll">
         {{ $slot }}
