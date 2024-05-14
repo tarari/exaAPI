@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>API.proof</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js']);
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="flex flex-col h-screen justify-between h-screen overflow-hidden">
     <header class="h-10 bg-gray-500 text-center  text-white text-3xl p-2 rounded-sm">
