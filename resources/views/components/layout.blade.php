@@ -9,7 +9,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="flex flex-col h-screen justify-between h-screen overflow-hidden">
-    <header class="h-10 bg-gray-500 text-center  text-white  p-4 rounded-sm flex">
+    <header class=" bg-gray-500 text-center  text-white  p-4 rounded-sm flex">
         <div class="px-4"><img class="w-8 h-8 flex-inline rounded-full " alt="logo" src="{{ Vite::asset('resources/img/logoface.png') }}"></div>
         <div class="px-4"><h1 class="flex-inline text-2xl">ApiProof v.1.0</h1></div></header>
     <x-nav>{{ $slot }}</x-nav>
