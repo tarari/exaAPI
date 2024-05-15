@@ -11,6 +11,7 @@ use App\Models\Category;
 class SearchController extends Controller
 {
     function searchByCategory(Request $request){
+        dd($request->get('category'));
         $category_id=Category::select('id')->where('name','LIKE','%'.$request->get('category','').'%')->first();
         return new ProductCollection(
             Product::select('name','stock','price','category','vendor')
