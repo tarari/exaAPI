@@ -29,8 +29,8 @@ class DashboardController extends Controller
         $data=$data['data'];
         return view('dashboard',['data'=>$data]);
     }
-    function search(){
-        $response=Http::get(env('API_URL').'/api/search');
+    function search(Request $request){
+        $response=Http::get(env('API_URL').'/api/search',['category'=>$request->get('category')]);
         $data=json_decode($response->body(),true);
         dd($data);
         $data=$data['data'];
