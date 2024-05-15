@@ -1,5 +1,5 @@
 <x-layout>
-    <div id="search" class="flex flex-col items-center justify-center py-4 w-full">
+    <div  class="flex flex-col items-center justify-center py-4 w-full">
         <div>
             <a href="{{route('products')}}">
                 <button  class="m-2 bg-teal-500 text-white px-4 py-2 rounded-md">Products</button></a>
