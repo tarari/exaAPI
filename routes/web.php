@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Api\Controllers\SearchController;
+use App\Http\Middleware\CheckSession;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,13 +20,13 @@ use App\Http\Api\Controllers\SearchController;
 Route::get('/', function () {
     return view('home');
 });
-Route::middleware('notoken')->group(
-    Route::get('/products', [DashboardController::class, 'products'])->name('products'),
-    Route::get('/vendors', [DashboardController::class, 'vendors'])->name('vendors'),
-    Route::get('/categories', [DashboardController::class, 'categories'])->name('categories'),
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard'),
-    Route::get('/search', [DashboardController::class, 'search']),
-);
+Route::middleware([CheckSession::class])->group( function(){
+    Route::get('/products', [DashboardController::class, 'products'])->name('products');
+    Route::get('/vendors', [DashboardController::class, 'vendors'])->name('vendors');
+    Route::get('/categories', [DashboardController::class, 'categories'])->name('categories');
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/search', [DashboardController::class, 'search']);
+});
 
 Route::get('/login',[AuthController::class,'login'])->name('login');
 Route::post('/auth',[AuthController::class,'auth'])->name('auth');
