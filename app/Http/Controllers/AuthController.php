@@ -82,7 +82,7 @@ class AuthController extends Controller
 
             return redirect('/dashboard');
         } catch (\Throwable $th) {
-            //return back()->with('error',$th->getMessage());
+            return back()->with('error',$th->getMessage());
         }
     }
     function logout(){
