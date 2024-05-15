@@ -16,7 +16,9 @@
     <main class="mb-auto overflow-y-scroll">
         {{ $slot }}
     </main>
-
+    <div>
+        @include('partials.errors')
+    </div>
     <footer class="w-full bg-black text-white px-auto py-4 text-center">API.Proof - by Toni Jimenez, 2024</footer>
 </body>
 </html>
