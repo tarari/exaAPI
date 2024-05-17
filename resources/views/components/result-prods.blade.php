@@ -29,7 +29,7 @@
             init() {
             },
             fetchData() {
-                axios.get('{{ route('dashboard.products') }}')
+                axios.get('{{ route('products') }}')
                     .then(response => {
                         this.data = response.data;
                         alert(this.data.message);
