@@ -15,9 +15,9 @@ class ProductController extends Controller
 
         $data = [
             'message' => 'Data loaded successfully',
-            'items' => new ProductCollection(Product::all())
+            'items' =>(new ProductCollection(Product::all()))
         ];
-
+        dd($data);
         return response()->json($data);
     }
     function show(Product $product){
