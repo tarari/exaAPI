@@ -1,5 +1,5 @@
 
-<div x-data="dataButton()" x-init="init()">
+<div x-data="dataProds()" x-init="init()">
     <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="fetchData">products..</button>
     <div x-show="data" class="mt-4">
         <p x-text="data.message"></p>
@@ -12,7 +12,7 @@
 </div>
 
 <script>
-    function dataButton() {
+    function dataProds() {
         return {
             data: null,
             init() {

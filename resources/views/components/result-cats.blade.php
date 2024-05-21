@@ -1,4 +1,4 @@
-<div x-data="dataButton()" x-init="init()">
+<div x-data="dataCats()" x-init="init()">
     <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="fetchData">categories..</button>
     <div x-show="data" class="mt-4">
         <p x-text="data.message"></p>
@@ -11,7 +11,7 @@
 </div>
 
 <script>
-    function dataButton() {
+    function dataCats() {
         return {
             data: null,
             init() {
