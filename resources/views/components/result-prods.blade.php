@@ -20,6 +20,7 @@
             fetchData() {
                 axios.get('{{ route("products") }}')
                     .then(response => {
+                        console.log(response);
                         this.data = response.data;
                         alert(this.data.message);
                     })
