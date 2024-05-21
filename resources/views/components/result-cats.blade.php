@@ -16,7 +16,7 @@
         <p x-text="data.message"></p>
         <ul>
             <template x-for="item in data.items" :key="item.name">
-                <li x-text="`${item.name}: ${item.price} ${item.stock}`"></li>
+                <li x-text="`${item.name}:`"></li>
             </template>
         </ul>
     </div>
@@ -29,7 +29,7 @@
             init() {
             },
             fetchData() {
-                axios.get('{{ route("products") }}')
+                axios.get('{{ route("categories") }}')
                     .then(response => {
                         this.data = response.data;
                         alert(this.data.message);
