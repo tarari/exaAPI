@@ -12,14 +12,7 @@ use Illuminate\Support\Facades\Redis;
 class ProductController extends Controller
 {
     function index(){
-        $products=new ProductCollection(Product::all());
-        dd($products);
-        $data = [
-            'message' => 'Data loaded successfully',
-            'items' =>(new ProductCollection(Product::all()))
-        ];
-        dd($data);
-        return response()->json($data);
+        return new ProductCollection(Product::all());
     }
     function show(Product $product){
         return new ProductResource($product);
