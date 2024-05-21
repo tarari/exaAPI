@@ -1,17 +1,6 @@
 
-{{--
-@foreach ($data as $item)
-<pre>
-    <span class="text-mono text-xs text-gray-500">
-    @php
-        print_r($item);
-    @endphp
-</span>
-</pre>
-@endforeach! --}}
-
 <div x-data="dataButton()" x-init="init()">
-    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="fetchData">Show products..</button>
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="fetchData">vendors..</button>
     <div x-show="data" class="mt-4">
         <p x-text="data.message"></p>
         <ul>
